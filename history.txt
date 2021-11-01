@@ -1,0 +1,500 @@
+  143  rm quotes.txt 
+  144  ls -l
+  145  rm -i thesis_backup/my_file.txt 
+  146  ls -l thesis_backup/
+  147  rm -r thesis_backup/
+  148  ls -l
+  149  cd data/
+  150  ls -l
+  151  mkdir backup
+  152  ls -l
+  153  cp amino-acids.txt animals.txt backup/
+  154  ls backup/
+  155  cd ../molecules/
+  156  ls -l
+  157  cd ..
+  158  mkdir molecules_backup
+  159  cp molecules/*.pdb molecules_backup/
+  160  ls molecules_backup/
+  161  cd molecules
+  162  ls
+  163  ?thane.pdb
+  164  ls ?thane.pdb
+  165  ls *t*ane
+  166  ls *t*ane.pdb
+  167  ls *t?ane.*
+  168  ls *t??ne.pdb
+  169  ls ethane.*
+  170  clear
+  171  ls *t*ane.pdb
+  172  ls *t?ane.*
+  173  ls *t??ne.pdb
+  174  ls ethane.*
+  175  ls *t?ne.*
+  176  cd ..
+  177  ls
+  178  ls -l
+  179  cd molecules
+  180  ls
+  181  wc *.pdb
+  182  wc -l =.pdb
+  183  wc -l *.pdb
+  184  wc -l
+  185  wc *.pdb > lengths.txt
+  186  ls -l
+  187  cat lengths.txt 
+  188  less lengths.txt 
+  189  les octane.pdb 
+  190  less octane.pdb 
+  191  sort -n lengths.txt 
+  192  sort lengths.txt 
+  193  sort -n lengths.txt > sorted_lengths.txt
+  194  head -n 1 sorted_lengths.txt 
+  195  head -n 5 sorted_lengths.txt 
+  196  tail -n 1 sorted_lengths.txt 
+  197  echo The echo command prints text
+  198  eecho hello > test.txt
+  199  echo hello > test.txt
+  200  echo hello >> test1.txt
+  201  head test.txt 
+  202  head test1.txt 
+  203  nano test1.txt 
+  204  echo hello > test.txt
+  205  echo hello >> test1.txt
+  206  cat test.txt 
+  207  nano test1.txt 
+  208  cat test1.txt 
+  209  sort -n lengths.txt | head -n 1
+  210  sort -n lengths.txt | cat
+  211  wc -l *.pdb | sort -n
+  212  wc -l *.pdb | sort -n | head -n 1
+  213  wc -l *.pdb | sort -n | head -n 1 > oneline.txt
+  214  cat oneline.txt 
+  215  cd ../data/
+  216  ls -l
+  217  cat animals.txt 
+  218  cat animals.txt | head -n 5
+  219  cat animals.txt | tail -n 3
+  220  cat animals.txt | head -n 5 | tail -n 3
+  221  cat animals.txt | head -n 5 | tail -n 3 | sort -r
+  222  cat animals.txt | head -n 5 | tail -n 3 | sort -r > final.txt
+  223  cot -d , 2 animals.txt 
+  224  cot -d , -f 2 animals.txt 
+  225  cut -d , 2 animals.txt 
+  226  cut -d , -f 2 animals.txt 
+  227  cut -d , -f 2 animals.txt | sort
+  228  cut -d , -f 2 animals.txt | sort | unique
+  229  cut -d , -f 2 animals.txt | sort | uniq
+  230  cut -d , -f 2 animals.txt | uniq
+  231  help cut
+  232  cut --help
+  233  ls
+  234  cd ../north-pacific-gyre/2012-07-03/
+  235  wc -l *.txt
+  236  wc -l *.txt | sort -n | head -n 5
+  237  ls *Z.txt
+  238  cd ../../creatures/
+  239  ls
+  240  head -n 5 basilisk.dat minotaur.dat unicorn.dat 
+  241  for filename in basilisk.dat minotaur.dat unicorn.dat ; do head -n $filename | tail -n 1; done
+  242  for filename in basilisk.dat minotaur.dat unicorn.datdo head -n $filename | tail -n 1; done
+  243  for filename in basilisk.dat minotaur.dat unicorn.dat ; do head -n 2 $filename | tail -n 1; done
+  244  for filename in basilisk.dat minotaur.dat unicorn.datdo head -n 2 $filename | tail -n 1; done
+  245  for filename in basilisk.dat minotaur.dat unicorn.dat ; do head -n 2 $filename | tail -n 1; done
+  246  cd ../molecules
+  247  ls
+  248  for file in *.pdb; do ls *.pdb; done
+  249  for file in *.pdb; do ls $file; done
+  250  for file in *.dat; do echo $file; head -n 100 filename | tail -n 20; done
+  251  for file in *.dat; do echo $file; head -n 100 file | tail -n 20; done
+  252  for file in *.dat; do echo $file; head -n 100 $file | tail -n 20; done
+  253  ls *.dat
+  254  cd ../molecules
+  255  for file in *.dat; do echo $file; head -n 100 $file | tail -n 20; done
+  256  ls *.dat
+  257  cd ../creatures/
+  258  ls
+  259  for file in *.dat; do echo $file; head -n 100 $file | tail -n 20; done
+  260  touch "red dragon.txt"
+  261  ls
+  262  for file in basilisk.dat minotaur.dat "red dragon.txt" unicorn.dat; do ls $file; done
+  263  ls
+  264  cp *.dat orig-*.dat .
+  265  ls
+  266  for file in *.dat; do cp $file orig-$file; done
+  267  ls
+  268  cd ../north-pacific-gyre/
+  269  ls
+  270  cd 2012-07-03/
+  271  ls
+  272  for file in NENE*A.txt NENE*B.txt; do echo $file; one; done
+  273  for file in NENE*A.txt NENE*B.txt; do echo $file; done
+  274  for file in NENE*A.txt NENE*B.txt; do echo $file stats-$file; done
+  275  for file in NENE*A.txt NENE*B.txt; do echo bash goostats.sh $file stats-$file; done
+  276  for file in NENE*A.txt NENE*B.txt; do bash goostats.sh $file stats-$file; done
+  277  ls
+  278  cat stats-NENE01729A.txt 
+  279  for file in NENE*A.txt NENE*B.txt; do echo bash goostats.sh ${file} stats-${file}; done
+  280  for file in NENE*A.txt NENE*B.txt; do echo bash goostats.sh ${file} stats-${file}.old; done
+  281  cat stats-*
+  282  cd ../../molecules
+  283  ls
+  284  clear
+  285  nano middle.sh
+  286  cat middle.sh 
+  287  bash middle.sh 
+  288  nano middle.sh 
+  289  bash middle.sh 
+  290  bash middle.sh octane.pdb 
+  291  bash middle.sh octane.pdb propane.pdb 
+  292  bash middle.sh propane.pdb 
+  293  nano middle.sh 
+  294  bash middle.sh propane.pdb 
+  295  bash middle.sh propane.pdb 10 3
+  296  nano middle.sh 
+  297  nano sorted.sh
+  298  bash sorted.sh *.pdb
+  299  bash sorted.sh *.pdb ../creatures/*.dat
+  300  cat sorted
+  301  cat sorted.sh
+  302  cd ../data/animal-counts/
+  303  ls
+  304  nano species.sh
+  305  ls
+  306  bash species.sh animals.txt 
+  307  history 
+  308  history | tail -n 5
+  309  cat sorted.sh
+  310  cd ../../north-pacific-gyre/2012-07-03/
+  311  ls
+  312  nano
+  313  bash do-stats.sh NENE*A.txt NENE*B.txt | wc -l
+  314  nano do-stats.sh 
+  315  nano do-stats.sh 
+  316  bash do-stats.sh NENE*A.txt NENE*B.txt | wc -l
+  317  history -a
+  318  ls
+  319  history -w ~/history.txt
+  320  vim ~/history.txt
+  321  ls
+  322  cd Desktop/
+  323  ls
+  324  cd Newcastle_University/
+  325  cd Carpentries/
+  326  ls
+  327  mkdir version-control
+  328  cd version-control/
+  329  git config --global user.name "Hammad Mir"
+  330  git config --global user.email "erhammadmir@gmail.com"
+  331  git config --global user.email "hammaduleaman@gmail.com"
+  332  git config --global --unset user.email
+  333  git config --global user.email "hammaduleaman@gmail.com"
+  334  git config --global core.autocrlf true
+  335  git config --global core.editor "nano -w"
+  336  git config --list
+  337  cd ~ Desktop/
+  338  cd ~/Desktop
+  339  ls
+  340  cd Newcastle_University/Carpentries/version-control/
+  341  mkdir recipes
+  342  ls
+  343  git init
+  344  rm -rf .git
+  345  cd recipes/
+  346  git init
+  347  ls
+  348  ls -a
+  349  git status
+  350  mkdir cocktails
+  351  cd cocktails/
+  352  git init
+  353  ls -a
+  354  git status
+  355  rm -rf .git
+  356  git status
+  357* ls -
+  358  cd ..
+  359  ls
+  360  cd..
+  361  ls -lA
+  362  cd cocktails/
+  363  ls -a
+  364  cd ~/recipes
+  365  cd ..
+  366  cd..
+  367  cd ..
+  368  cd recipes/
+  369  nano guacamole.md
+  370  ls
+  371  cat guacamole.md 
+  372  git status
+  373  git add guacamole.md 
+  374  git status
+  375  git commit -m "Create a template for recipe"
+  376  vim guacamole.md 
+  377  git status
+  378  git config --global -l
+  379  git log
+  380  ls
+  381  nano guacamole.md 
+  382  cat guacamole.md 
+  383  git status
+  384  git add guacamole.md 
+  385  git status
+  386  git diff --staged
+  387  git commit -m "Add guacamole's basic ingredients"
+  388  git status
+  389  git diff --staged
+  390  nano guacamole.md 
+  391  git diff
+  392  git add guacamole.md 
+  393  git diff
+  394  git diff --staged
+  395  git status
+  396  git commit -m "Modify guacamole to the traditional lime"
+  397  git log
+  398  git log -1
+  399  git log -oneline
+  400  git log --oneline
+  401  git log --graph
+  402  pwd
+  403  mkdir cakes
+  404  git status
+  405  git add cakes
+  406  git status
+  407  cd cakes/
+  408  touch .gitkeep
+  409  cd ..
+  410  git add cakes/
+  411  git status
+  412  touch cakes/brownie cakes/lemon_drizzle
+  413  ls cakes/
+  414  git add cakes/
+  415  git status
+  416  rm cakes/.gitkeep 
+  417  git add cakes/
+  418  git status 
+  419  git commit -m "Add some initial cakes"
+  420  git status
+  421  git log --graph
+  422  ls
+  423  nano guacamole.md 
+  424  nano groceries.md
+  425  git add guacamole.md groceries.md 
+  426  git status
+  427  nano guacamole.md 
+  428  git commit -m "Write prices for ingredients and their sources"
+  429  cd ..
+  430  mkdir bio
+  431  git init
+  432  nano me.txt
+  433  git add me.txt 
+  434  git status
+  435  ls
+  436  rm -rf .git
+  437  mv me.txt bio/
+  438  ls
+  439  cd bio
+  440  l
+  441  ls
+  442  git init
+  443  ls
+  444  ls -a
+  445  git status
+  446  git add me.txt 
+  447  git status
+  448  git commit -m "Creating biography"
+  449  git status
+  450  nano me.txt 
+  451  git diff
+  452  git add me.txt 
+  453  git diff --staged
+  454  git status
+  455  git commit -m "Adding Uni to Biography"
+  456  git status
+  457  cd ../recipes/
+  458  ls
+  459  nano guacamole.md 
+  460  git diff guacamole.md
+  461  git diff HEAD guacamole.md
+  462  git diff HEAD~1 guacamole.md
+  463  git diff HEAD~2 guacamole.md
+  464  git diff HEAD~3 guacamole.md
+  465  git show 
+  466  git show guacamole.md
+  467  git show HEAD~2 guacamole.md
+  468  git checkout guacamole.md
+  469  cat guacamole.md 
+  470  git status
+  471  git log
+  472  git checkout 826b2
+  473  git checkout 826b2 guacamole.md
+  474  git status
+  475  cat git
+  476  cat guacamole.md 
+  477  git status
+  478  git diff --staged guacamole.md
+  479  git checkout d69e6d guacamole.md
+  480  git status
+  481  git checkout HEAD
+  482  git status
+  483  cat guacamole.md 
+  484  git log
+  485  git checkout master
+  486  git statu
+  487  git status
+  488  cat guacamole.md 
+  489  git checkout HEAD guacamole.md
+  490  cat guacamole.md 
+  491  git status
+  492  git log guacamole.md
+  493  git checkout HEAD guacamole.md
+  494  git status
+  495  git checkout HEAD~1 guacamole.md
+  496  git status
+  497  git log guacamole.md
+  498  git checkout HEAD guacamole.md
+  499  git status
+  500  git checkout HEAD~1 guacamole.md
+  501  git checkout -- guacamole.md
+  502  git status
+  503  git checkout -- .
+  504  git status
+  505  cat guacamole.md 
+  506  git checkout HEAD guacamole.md
+  507  git status
+  508  cat guacamole.md 
+  509  git checkout HEAD~1 guacamole.md
+  510  git status
+  511  cat guacamole.md 
+  512  git checkout -- guacamole.md
+  513  git status
+  514  cat guacamole.md 
+  515  git checkout -- .
+  516  git status
+  517  cat guacamole.md 
+  518  git checkout --guacamole.md
+  519  git checkout HEAD guacamole.md
+  520  git status
+  521  cat gua
+  522  cat guacamole.md 
+  523  nano guacamole.md 
+  524  git add guacamole.md 
+  525  git commit -m "Commit with error"
+  526  git log guacamole.md
+  527  git revert 281cdc
+  528  git log
+  529  mkdir receipts
+  530  ls
+  531  cd receipts/
+  532  cd ..
+  533  ls
+  534  touch a.png b.png c.png receipts/a.jpg receipts/b.jpg
+  535  ls
+  536  git status
+  537  nano .gitignore
+  538  git status
+  539  nano .gitignore
+  540  git status
+  541  nano .gitignore
+  542  git add .gitignore 
+  543  git commit -m "Ignore png files and the receipts folder"
+  544  git status
+  545  git status --ignore
+  546  git status --ignored
+  547  nano .gitignore
+  548  git status
+  549  git add .gitignore 
+  550  git commit -m "Ignore png files and the receipts folder"
+  551  git status
+  552  nano .gitignore
+  553  git add .gitignore 
+  554  git commit -m "Ignore png files and the receipts folder"
+  555  git status
+  556  nano .gitignore 
+  557  touch final.png
+  558  nano .gitignore 
+  559  ll
+  560  ls -la
+  561  git add .gitignore 
+  562  git commit -m "Ignore png files and the receipts folder"
+  563  ll
+  564  mkdir data images plots analysis
+  565  ls
+  566  ll
+  567  nano .gitignore 
+  568  rm -r images/ plots/ data/ analysis/
+  569  ll
+  570  mkdir receipts/data receipts/images receipts/plots receipts/analysis
+  571  ll
+  572  nano .gitignore 
+  573  git add .gitignore 
+  574* git commit -m "Ignore png files and the receipts folder but "
+  575  git status
+  576  touch receipts/analysis/.gitignore
+  577  mv receipts/analysis/.gitignore receipts/analysis/.gitkeep
+  578  cp receipts/analysis/.gitkeep receipts/data/
+  579  cp receipts/analysis/.gitkeep receipts/plots/
+  580  cp receipts/analysis/.gitkeep receipts/images/
+  581  git add ls -la
+  582  git add ls -l
+  583  ls -la
+  584  git status
+  585  nano .gitignore 
+  586  git status
+  587  cd receipts/
+  588  ls -r
+  589  cd an
+  590  cd analysis/
+  591  ls -R
+  592  ls -a
+  593  cd ..
+  594  cd ..
+  595  ls
+  596  cd receipts/
+  597  ls
+  598  ls -la
+  599  ls -a
+  600  nano .gitignore
+  601  ls -a
+  602  cd ..
+  603  ls
+  604  ls -a
+  605  nano .gitignore 
+  606  git status
+  607  git add .gitignore final.png receipts/
+  608  git status
+  609  ll
+  610  mkdir storage
+  611  ls
+  612  ll
+  613  git status
+  614  git commit -m "Give us a clean"
+  615  git status
+  616  ls
+  617  cd storage/
+  618  touch .gitkeep
+  619  ls -la
+  620  cd ..
+  621  git status 
+  622  cd storage/
+  623  mkdir s1 s2 s3
+  624  ;s
+  625  ls
+  626  touch s1/.gitkeep s2/.gitkeep s3/.gitkeep
+  627  ls
+  628  ls -a s1/
+  629  ls -a s2/
+  630  ls -a s3/
+  631  cd ..
+  632  ls -a
+  633  nano .gitignore 
+  634  git status
+  635  nano .gitignore 
+  636  git status
+  637  git add storage/s3/
+  638  git status
+  639  git add .gitignore
+  640  git commit -m "Ignoring things"
+  641  git status
+  642  history > history.txt
