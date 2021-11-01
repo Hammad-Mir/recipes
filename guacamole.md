@@ -1,4 +1,4 @@
-# Ingradients (this is the error)
+# Ingradients
 - avacado
 - lime
 - salt
