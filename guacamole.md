@@ -1,5 +1,5 @@
 # Ingradients
 - avacado
-- lemon
+- lime
 - salt
 # Instructions
